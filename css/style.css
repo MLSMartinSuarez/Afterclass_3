@@ -1,0 +1,141 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: auto;
+    max-width: 900px;
+}
+ 
+.header img{
+    width: 250px;
+    padding: 20px;
+}
+.nav {
+    text-transform: uppercase;
+    padding: 18px;
+}
+
+.nav ul {
+    list-style-type: none;
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+.nav li{
+    margin: 0 15px;
+}
+
+.nav a {
+    color: #a00606;
+    text-decoration: none;
+}
+
+/* MAIN */
+
+#main-index h1{
+    margin: 20px 0px;
+}
+
+#main-index img{
+    margin: 30px 0px;
+}
+
+#main-index p{
+    margin: 20px 0px;
+}
+
+#main-index iframe{
+    margin: 20px 0px;
+}
+
+#main-index {
+    font-family: sans-serif;
+    /* COMPROBADO QUE AL USUARIO 800 ESTA BIEN */
+    max-width: 1050px;
+    margin: auto;
+
+    display: grid; 
+    grid-template-columns: 70% 30%;
+    grid-template-areas: 
+    "titular aside"
+    "noticia aside"
+    "noticia ."
+    "noticia ."; 
+}
+.titular{
+    grid-area: titular;
+}
+.aside{
+    grid-area: aside;
+    margin: 0px 20px;
+}
+.noticia {
+    grid-area: noticia;
+}
+
+#main-index .categoria {
+    background-color: #DD3333;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 10px;
+    display: inline;
+    /* GROSOR = PADDING */
+    padding: 5px 30px;
+    /* MOVIMIENTO */
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#main-index .fecha {
+    font-size: 9px;
+}
+
+
+
+#main-index .aside h3{
+    background-color: #000000;
+    color: white;
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+#main-index .aside p{
+    margin: 30px 0px;
+}
+
+#main-index .aside form{
+    width: 100px;
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px;
+    font-family: sans-serif;
+}
+
+@media (max-width: 1000px){
+    #main-index {
+        display: grid; 
+        grid-template-columns: 70% 30%;
+        grid-template-areas: 
+        "titular"
+        "noticia"
+        "noticia"
+        "noticia"
+        "aside"
+        "aside"; 
+     }
+
+}
